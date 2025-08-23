@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', 'Noto Sans KR', Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Ensure mobile-first responsive design */
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Scale up for larger screens while maintaining aspect ratio */
+@media (min-width: 768px) {
+  .mobile-container {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .mobile-container {
+    transform: scale(1.5);
+  }
+}
+
+@media (min-width: 1280px) {
+  .mobile-container {
+    transform: scale(1.8);
+  }
+}
