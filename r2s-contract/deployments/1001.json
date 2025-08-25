@@ -1,0 +1,15 @@
+{
+  "network": "kairos",
+  "chainId": "1001",
+  "deployer": "0x9f6D4f5dFAcf340B5Ba0b8768aEf5144bb685Ddc",
+  "timestamp": "2025-08-25T15:55:39.654Z",
+  "contracts": {
+    "MockUSDT": "0xA18399D0a2Ae3713498f6b9b40290D0f7eD27C15",
+    "R2SCampaign": "0x9c14193b5470327Fa3F428E1589546AcDC717FE2"
+  },
+  "configuration": {
+    "usdt": "0xA18399D0a2Ae3713498f6b9b40290D0f7eD27C15",
+    "treasury": "0x9f6D4f5dFAcf340B5Ba0b8768aEf5144bb685Ddc",
+    "feeCollector": "0x9f6D4f5dFAcf340B5Ba0b8768aEf5144bb685Ddc"
+  }
+}

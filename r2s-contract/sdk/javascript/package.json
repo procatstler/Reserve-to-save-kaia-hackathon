@@ -1,0 +1,9 @@
+{
+  "name": "@r2s/sdk-js",
+  "version": "1.0.0",
+  "description": "R2S Smart Contract JavaScript SDK",
+  "main": "r2s-sdk.js",
+  "dependencies": {
+    "ethers": "^6.0.0"
+  }
+}

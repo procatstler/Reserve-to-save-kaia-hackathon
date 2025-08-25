@@ -1,0 +1,17 @@
+{
+  "name": "@r2s/sdk-ts",
+  "version": "1.0.0",
+  "description": "R2S Smart Contract TypeScript SDK",
+  "main": "dist/r2s-sdk.js",
+  "types": "dist/r2s-sdk.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "ethers": "^6.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  }
+}
