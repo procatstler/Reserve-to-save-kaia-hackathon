@@ -1,8 +1,8 @@
 'use client';
 
 import { useRouter, usePathname } from 'next/navigation';
-import { cn } from '@/src/lib/utils';
-import { ROUTES } from '@/src/constants';
+import { cn } from '@/lib/utils';
+import { ROUTES } from '@/constants';
 
 interface NavItem {
   id: string;

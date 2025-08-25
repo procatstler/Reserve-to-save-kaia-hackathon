@@ -1,8 +1,8 @@
 'use client';
 
-import { Card } from '@/src/components/ui/Card';
-import { Campaign } from '@/src/types';
-import { formatPrice } from '@/src/lib/utils';
+import { Card } from '@/components/ui/Card';
+import { Campaign } from '@/types';
+import { formatPrice } from '@/lib/utils';
 
 interface PriceSectionProps {
   campaign: Campaign;

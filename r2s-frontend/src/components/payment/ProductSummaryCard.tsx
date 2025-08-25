@@ -1,7 +1,7 @@
 'use client';
 
-import { Campaign } from '@/src/types';
-import Badge from '@/src/components/ui/Badge';
+import { Campaign } from '@/types';
+import Badge from '@/components/ui/Badge';
 
 interface ProductSummaryCardProps {
   campaign: Campaign & { quantity?: string };

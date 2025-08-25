@@ -1,12 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import PageLayout from '@/src/components/layout/PageLayout';
-import HeroSection from '@/src/components/landing/HeroSection';
-import FeatureCard from '@/src/components/landing/FeatureCard';
-import ExampleCard from '@/src/components/landing/ExampleCard';
-import Button from '@/src/components/ui/Button';
-import { ROUTES, APP_NAME } from '@/src/constants';
+import PageLayout from '@/components/layout/PageLayout';
+import R2SHeader from '@/components/common/R2SHeader';
+import HeroSection from '@/components/landing/HeroSection';
+import FeatureCard from '@/components/landing/FeatureCard';
+import ExampleCard from '@/components/landing/ExampleCard';
+import { Button } from '@/components/ui/Button';
+import { ROUTES } from '@/constants';
 
 const features = [
   {
@@ -31,60 +32,58 @@ const features = [
 
 export default function LandingPage() {
   return (
-    <PageLayout
-      header={{
-        title: APP_NAME,
-        variant: 'gradient',
-        fixed: true,
-        showClose: true
-      }}
-      containerBackground="gradient"
-    >
-      {/* Hero Section */}
-      <HeroSection />
+    <PageLayout containerBackground="gradient">
+      <div className="flex flex-col min-h-screen">
+        {/* 공통 R2S 헤더 */}
+        <R2SHeader showClose />
+        
+        {/* Hero Section */}
+        <section className="pt-[44px]">
+          <HeroSection />
+        </section>
 
-      {/* Feature Cards Section with proper padding */}
-      <div className="absolute top-[39%] left-[20px] right-[20px] sm:left-[24px] sm:right-[24px] h-[27%]">
-        <div className="flex flex-col gap-[12px] h-full">
-          {features.map((feature, index) => (
-            <div key={index} className="flex-1">
-              <FeatureCard {...feature} />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Example Card with padding */}
-      <div className="absolute top-[68%] left-[20px] right-[20px] sm:left-[24px] sm:right-[24px] h-[10%]">
-        <ExampleCard />
-      </div>
-
-      {/* CTA Button with padding */}
-      <div className="absolute top-[80%] left-[20px] right-[20px] sm:left-[24px] sm:right-[24px] h-[8%]">
-        <Link href={ROUTES.campaigns} className="block w-full h-full">
-          <Button 
-            fullWidth
-            variant="primary"
-            size="xl"
-            className="h-full bg-white text-[#1DB954] hover:bg-white/95 font-bold shadow-xl rounded-[12px] text-[16px]"
-          >
-            지금 시작하기 →
-          </Button>
-        </Link>
-      </div>
-
-      {/* Footer with padding */}
-      <div className="absolute top-[90%] left-[20px] right-[20px] bottom-[10px]">
-        <div className="flex flex-col items-center gap-[6px]">
-          <p className="text-white/80 text-[11px] font-medium">
-            LINE 친구들과 함께 더 많이 절약하세요
-          </p>
-          <div className="flex gap-[16px]">
-            <span className="text-white/60 text-[10px]">👥 10만+ 사용자</span>
-            <span className="text-white/60 text-[10px]">⭐ 평균 12% 할인</span>
-            <span className="text-white/60 text-[10px]">🔒 100% 안전</span>
+        {/* Main Content */}
+        <main className="flex-1 px-[20px] space-y-[16px] pt-[60px] pb-[40px]">
+          {/* Feature Cards Section */}
+          <div className="space-y-[12px]">
+            {features.map((feature, index) => (
+              <div key={index}>
+                <FeatureCard {...feature} />
+              </div>
+            ))}
           </div>
-        </div>
+
+          {/* Example Card */}
+          <div className="py-[12px]">
+            <ExampleCard />
+          </div>
+
+          {/* CTA Button */}
+          <div className="py-[16px]">
+            <Link href={ROUTES.campaigns} className="block w-full">
+              <Button 
+                fullWidth
+                variant="primary"
+                size="xl"
+                className="h-[56px] bg-white text-[#1DB954] hover:bg-white/95 font-bold shadow-xl rounded-[12px] text-[16px]"
+              >
+                지금 시작하기 →
+              </Button>
+            </Link>
+          </div>
+
+          {/* Footer */}
+          <div className="flex flex-col items-center gap-[6px] pt-[24px]">
+            <p className="text-white/80 text-[11px] font-medium text-center">
+              LINE 친구들과 함께 더 많이 절약하세요
+            </p>
+            <div className="flex gap-[16px]">
+              <span className="text-white/60 text-[10px]">👥 10만+ 사용자</span>
+              <span className="text-white/60 text-[10px]">⭐ 평균 12% 할인</span>
+              <span className="text-white/60 text-[10px]">🔒 100% 안전</span>
+            </div>
+          </div>
+        </main>
       </div>
     </PageLayout>
   );

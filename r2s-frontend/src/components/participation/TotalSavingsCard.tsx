@@ -1,6 +1,6 @@
 'use client';
 
-import { Card } from '@/src/components/ui/Card';
+import { Card } from '@/components/ui/Card';
 
 interface TotalSavingsCardProps {
   totalSavings: number;

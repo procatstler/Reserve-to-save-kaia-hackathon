@@ -1,7 +1,7 @@
 'use client';
 
-import { Card } from '@/src/components/ui/Card';
-import { Campaign } from '@/src/types';
+import { Card } from '@/components/ui/Card';
+import { Campaign } from '@/types';
 
 interface ParticipationStatusProps {
   campaign: Campaign;

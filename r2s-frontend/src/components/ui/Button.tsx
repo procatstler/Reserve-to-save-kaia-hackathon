@@ -1,7 +1,7 @@
 'use client';
 
 import { ReactNode, ButtonHTMLAttributes } from 'react';
-import { cn } from '@/src/lib/utils';
+import { cn } from '@/lib/utils';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
@@ -11,7 +11,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   loading?: boolean;
 }
 
-export default function Button({ 
+export function Button({ 
   children, 
   className,
   variant = 'primary',
@@ -39,7 +39,8 @@ export default function Button({
   return (
     <button
       className={cn(
-        'font-bold rounded-full transition-colors shadow-lg disabled:opacity-50 disabled:cursor-not-allowed',
+        'font-bold rounded-full shadow-lg disabled:opacity-50 disabled:cursor-not-allowed',
+        'transform transition-all duration-150 active:scale-[0.98]',
         variantClasses[variant],
         sizeClasses[size],
         fullWidth && 'w-full',

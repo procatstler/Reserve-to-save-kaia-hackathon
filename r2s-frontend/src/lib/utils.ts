@@ -5,7 +5,10 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function formatPrice(price: number, currency: string = 'USDT'): string {
+export function formatPrice(price: number | undefined | null, currency: string = 'USDT'): string {
+  if (price == null || isNaN(price)) {
+    return `0 ${currency}`;
+  }
   return `${price.toLocaleString()} ${currency}`;
 }
 

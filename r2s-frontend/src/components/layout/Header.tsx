@@ -2,8 +2,8 @@
 
 import { ReactNode } from 'react';
 import { useRouter } from 'next/navigation';
-import { cn } from '@/src/lib/utils';
-import { BackIcon, CloseIcon } from '@/src/components/icons/HeaderIcons';
+import { cn } from '@/lib/utils';
+import { BackIcon, CloseIcon } from '@/components/icons/HeaderIcons';
 
 export interface HeaderProps {
   // 기본 속성

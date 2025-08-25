@@ -15,7 +15,7 @@ export interface Campaign {
   timeRemaining?: string;
   daysRemaining?: string;
   progress: number;
-  status: 'ongoing' | 'completed' | 'upcoming';
+  status: 'ongoing' | 'completed' | 'upcoming' | 'active';
   discountRate: number;
   targetDiscount: number;
   quantity: string;

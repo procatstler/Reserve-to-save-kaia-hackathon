@@ -1,7 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
-import { cn } from '@/src/lib/utils';
+import { cn } from '@/lib/utils';
 import MobileContainer from './MobileContainer';
 import Header, { type HeaderProps } from './Header';
 import BottomNavigation from './BottomNavigation';

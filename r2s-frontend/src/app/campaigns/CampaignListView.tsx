@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import PageLayout from '@/src/components/layout/PageLayout';
-import CampaignCard from '@/src/components/campaign/CampaignCard';
-import CampaignTabs from '@/src/components/campaign/CampaignTabs';
-import Button from '@/src/components/ui/Button';
-import { Campaign } from '@/src/types';
-import { ROUTES, APP_NAME } from '@/src/constants';
+import PageLayout from '@/components/layout/PageLayout';
+import CampaignCard from '@/components/campaign/CampaignCard';
+import CampaignTabs from '@/components/campaign/CampaignTabs';
+import Button from '@/components/ui/Button';
+import { Campaign } from '@/types';
+import { ROUTES, APP_NAME } from '@/constants';
 import { mockCampaigns, getCampaignById } from '@/lib/mockData';
 
 export default function CampaignListView() {

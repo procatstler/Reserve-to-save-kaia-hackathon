@@ -1,8 +1,8 @@
 'use client';
 
-import { Campaign } from '@/src/types';
-import Badge from '@/src/components/ui/Badge';
-import ProgressBar from '@/src/components/ui/ProgressBar';
+import { Campaign } from '@/types';
+import Badge from '@/components/ui/Badge';
+import ProgressBar from '@/components/ui/ProgressBar';
 
 interface OngoingCampaignCardProps {
   campaign: Campaign & {

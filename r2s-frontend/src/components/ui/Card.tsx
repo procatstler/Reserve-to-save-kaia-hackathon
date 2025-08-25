@@ -1,7 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
-import { cn } from '@/src/lib/utils';
+import { cn } from '@/lib/utils';
 
 interface CardProps {
   children: ReactNode;
@@ -34,10 +34,10 @@ export function Card({
   return (
     <div 
       className={cn(
-        'rounded-[16px] transition-all',
+        'rounded-[16px]',
         variantClasses[variant],
         paddingClasses[padding],
-        onClick && 'cursor-pointer hover:shadow-[0_4px_20px_rgba(0,0,0,0.12)]',
+        onClick && 'cursor-pointer transform transition-transform duration-150 active:scale-[0.99]',
         className
       )}
       onClick={onClick}

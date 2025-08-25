@@ -2,17 +2,17 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import PageLayout from '@/src/components/layout/PageLayout';
-import Button from '@/src/components/ui/Button';
-import ProductSummaryCard from '@/src/components/payment/ProductSummaryCard';
-import DepositAmountSection from '@/src/components/payment/DepositAmountSection';
-import ExpectedDiscountSection from '@/src/components/payment/ExpectedDiscountSection';
-import SafetyGuaranteeCard from '@/src/components/payment/SafetyGuaranteeCard';
-import WarningSection from '@/src/components/payment/WarningSection';
-import WalletInfoCard from '@/src/components/payment/WalletInfoCard';
+import PageLayout from '@/components/layout/PageLayout';
+import { Button } from '@/components/ui/Button';
+import ProductSummaryCard from '@/components/payment/ProductSummaryCard';
+import DepositAmountSection from '@/components/payment/DepositAmountSection';
+import ExpectedDiscountSection from '@/components/payment/ExpectedDiscountSection';
+import SafetyGuaranteeCard from '@/components/payment/SafetyGuaranteeCard';
+import WarningSection from '@/components/payment/WarningSection';
+import WalletInfoCard from '@/components/payment/WalletInfoCard';
 import { getCampaignById } from '@/lib/mockData';
-import { Campaign } from '@/src/types';
-import { ROUTES } from '@/src/constants';
+import { Campaign } from '@/types';
+import { ROUTES } from '@/constants';
 
 export default function PaymentConfirmationView() {
   const searchParams = useSearchParams();

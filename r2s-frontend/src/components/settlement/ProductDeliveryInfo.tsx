@@ -1,7 +1,7 @@
 'use client';
 
-import { Card } from '@/src/components/ui/Card';
-import Badge from '@/src/components/ui/Badge';
+import { Card } from '@/components/ui/Card';
+import Badge from '@/components/ui/Badge';
 
 interface ProductDeliveryInfoProps {
   product: {

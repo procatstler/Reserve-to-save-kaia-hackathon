@@ -1,8 +1,24 @@
 'use client';
 
-import { useEffect } from 'react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { Bootstrap } from '@/components/Bootstrap/Bootstrap';
+import { useState, useEffect } from 'react';
 
 export function Providers({ children }: { children: React.ReactNode }) {
+  const [queryClient] = useState(
+    () =>
+      new QueryClient({
+        defaultOptions: {
+          queries: {
+            staleTime: 60 * 1000, // 1분
+            refetchOnWindowFocus: false,
+            retry: 1
+          }
+        }
+      })
+  );
+
   useEffect(() => {
     // Suppress external extension errors (like MetaMask JSON-RPC errors)
     const handleError = (event: ErrorEvent) => {
@@ -37,6 +53,13 @@ export function Providers({ children }: { children: React.ReactNode }) {
       window.removeEventListener('unhandledrejection', handleUnhandledRejection);
     };
   }, []);
-
-  return <>{children}</>;
+  
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Bootstrap>
+        {children}
+      </Bootstrap>
+      {process.env.NODE_ENV === 'development' && <ReactQueryDevtools />}
+    </QueryClientProvider>
+  );
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import Badge from '@/src/components/ui/Badge';
+import Badge from '@/components/ui/Badge';
 
 interface CompletedCampaignCardProps {
   campaign: {

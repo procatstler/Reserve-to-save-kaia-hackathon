@@ -1,9 +1,9 @@
 'use client';
 
 import { ReactNode } from 'react';
-import { cn } from '@/src/lib/utils';
-import { MOBILE_CONTAINER } from '@/src/constants';
-import { useResponsiveContainer } from '@/src/hooks/useResponsiveContainer';
+import { cn } from '@/lib/utils';
+import { MOBILE_CONTAINER } from '@/constants';
+import { useResponsiveContainer } from '@/hooks/useResponsiveContainer';
 
 interface MobileContainerProps {
   children: ReactNode;
@@ -46,7 +46,7 @@ export default function MobileContainer({
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
       <div 
         className={cn(
-          'relative shadow-2xl mobile-container transition-transform duration-300',
+          'relative shadow-2xl mobile-container',
           backgroundClasses[background],
           className
         )}

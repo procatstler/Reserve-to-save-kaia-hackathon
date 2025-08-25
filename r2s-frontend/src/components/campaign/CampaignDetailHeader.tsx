@@ -1,7 +1,7 @@
 'use client';
 
-import Badge from '@/src/components/ui/Badge';
-import { Campaign } from '@/src/types';
+import Badge from '@/components/ui/Badge';
+import { Campaign } from '@/types';
 
 interface CampaignDetailHeaderProps {
   campaign: Campaign;

@@ -1,9 +1,9 @@
 'use client';
 
-import { Card } from '@/src/components/ui/Card';
-import Badge from '@/src/components/ui/Badge';
-import ProgressBar from '@/src/components/ui/ProgressBar';
-import { Campaign } from '@/src/types';
+import { Card } from '@/components/ui/Card';
+import Badge from '@/components/ui/Badge';
+import ProgressBar from '@/components/ui/ProgressBar';
+import { Campaign } from '@/types';
 
 interface DiscountSectionProps {
   campaign: Campaign;

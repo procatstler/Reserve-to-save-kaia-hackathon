@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { MOBILE_CONTAINER } from '@/src/constants';
+import { MOBILE_CONTAINER } from '@/constants';
 
 interface ResponsiveDimensions {
   width: number;

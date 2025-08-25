@@ -1,10 +1,10 @@
 'use client';
 
-import { Campaign } from '@/src/types';
-import { Card } from '@/src/components/ui/Card';
-import Badge from '@/src/components/ui/Badge';
-import ProgressBar from '@/src/components/ui/ProgressBar';
-import { formatPrice } from '@/src/lib/utils';
+import { Campaign } from '@/types';
+import { Card } from '@/components/ui/Card';
+import Badge from '@/components/ui/Badge';
+import ProgressBar from '@/components/ui/ProgressBar';
+import { formatPrice } from '@/lib/utils';
 
 interface CampaignCardProps {
   campaign: Campaign;

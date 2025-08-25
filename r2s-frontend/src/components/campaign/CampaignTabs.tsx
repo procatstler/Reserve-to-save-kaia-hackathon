@@ -1,7 +1,7 @@
 'use client';
 
-import { cn } from '@/src/lib/utils';
-import { CAMPAIGN_TABS } from '@/src/constants';
+import { cn } from '@/lib/utils';
+import { CAMPAIGN_TABS } from '@/constants';
 
 interface CampaignTabsProps {
   activeTab: string;

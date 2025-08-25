@@ -1,5 +1,5 @@
-import CampaignListView from './CampaignListView';
+import CampaignsView from './CampaignsView';
 
 export default function CampaignsPage() {
-  return <CampaignListView />;
+  return <CampaignsView />;
 }
